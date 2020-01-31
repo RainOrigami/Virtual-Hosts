@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <title>Virtual Host Configuration</title>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            min-width: 357px;
+            overflow-x: hidden;
+        }
+
+        img {
+            margin: 5px;
+            border: 2px solid black;
+            vertical-align: middle;
+            width: 75px;
+            height: 75px;
+        }
+
+        table#configuration {
+            table-layout: fixed;
+        }
+
+            table#configuration tr .ipCell, table#configuration tr .vhostCell {
+                width: 250px;
+                max-width: 250px;
+                min-width: 250px;
+            }
+
+            table#configuration tr input[type=text] {
+                width: 248px;
+                max-width: 248px;
+                min-width: 248px;
+            }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <script id="template" type="text/x-custom-template">
+        <tr>
+            <td class="ipCell"><input type="text" class="ipaddr" placeholder="127.0.0.1" /></td>
+            <td class="vhostCell"><input type="text" class="vhost" placeholder="dev.localhost" /></td>
+            <td class="enabledCell" align="center"><input type="checkbox" class="enabled" checked="checked" /></td>
+            <td class="buttonCell" align="center"><button class="button delete">X</button></td>
+        </tr>
+    </script>
+    <table id="configuration">
+        <thead>
+            <tr>
+                <th class="ipCell">IP Address</th>
+                <th class="vhostCell">Virtual Host</th>
+                <th class="enabledCell">Enabled</th>
+                <th class="buttonCell">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr id="newLine">
+                <td colspan="3"><button class="button" id="addLine">Add new Virtual Host</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="checkbox" id="enabled" checked="checked" /> <label for="enabled">Globally Enabled</label><br />
+</body>
+</html>
+

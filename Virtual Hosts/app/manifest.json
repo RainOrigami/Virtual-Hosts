@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Virtual Hosts",
+  "description": "Apply a virtual hosts file for development purposes.",
+  "version": "1.0",
+
+  "applications": {
+    "gecko": {
+      "id": "virtual-hosts-firefox@codefreak.net"
+    }
+  },
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/",
+    "\u003Call_urls>",
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": [ "background.js" ]
+  },
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
