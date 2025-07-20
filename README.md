@@ -1,3 +1,7 @@
+# Orphaned
+
+Send pull requests for fixes or contact me on Discord @rainorigami to adopt this project.
+
 # Virtual-Hosts
 Overwrite the Host HTTP header in Firefox requests to debug your web server or work around DNS restrictions.
 
